@@ -8,7 +8,7 @@ export default {
     extend: {},
     colors: {
 
-      'bg-primary': '#095D40',
+      
       'blue': '#1fb6ff',
       'white': '#ffffff',
       'pink': '#ff49db',
@@ -16,7 +16,7 @@ export default {
       'bg-gold': '#F89C0E',
       'orange': '#ff7849',
       'bg-green': '#3F6341',
-      'text-green':'#3F6341',
+      'text-green':'#095D40',
       'gray-btn': '#F4F2F2',
       'text-gray':'#757575',
       'gray': '#8492a6',

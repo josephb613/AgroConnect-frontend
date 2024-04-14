@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const products = [
   {
     id: 3,
-    name: "Carottes",
+    name: "Maïs de bandundu",
     price: 2.8,
     category: "Maïs",
     image:
@@ -194,9 +194,8 @@ const ShoppingCartPage = () => {
             ✕
           </button>
         </div>
-     
 
-     {/* menu Catégories */}
+        {/* menu Catégories */}
 
         <div className=" mt-6 p-3  rounded paramsCategories  ">
           <div className="px-4">
@@ -211,7 +210,6 @@ const ShoppingCartPage = () => {
           </button>
           {categoriesButtons}
         </div>
-
       </section>
       {/*  Tri par défaut*/}
       <section className="p-5 border  rounded  border-gray w-full lg:w-3/4">
@@ -233,7 +231,7 @@ const ShoppingCartPage = () => {
             {currentProducts.map((product) => (
               <div
                 key={product.id}
-                className="p-4 rounded-md overflow-hidden border border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative"
+                className="p-4 rounded-md overflow-hidden  border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative"
               >
                 <img
                   src={product.image}

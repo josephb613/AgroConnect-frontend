@@ -87,7 +87,6 @@ export default function Navbar() {
   return (
     <div className="flex-col">
       {/* <Header /> */}
-
       <div className="hidden  text-nowrap sm:block pb-3 justify-center font-medium text-sm">
         <div className="w-full flex">
           <ul className="flex gap-12 ml-[32%] w-[60%] text-text-gray">
