@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary-color: #007bff; /* Bleu primaire */
+    --secondary-color: #6c757d; /* Gris foncé */
+    --success-color: #28a745; /* Vert succès */
+    --info-color: #17a2b8; /* Bleu info */
+    --warning-color: #ffc107; /* Jaune avertissement */
+    --danger-color: #dc3545; /* Rouge danger */
+    --light-color: #f8f9fa; /* Gris clair */
+    --dark-color: #343a40; /* Gris foncé */
+    --accent-color: #6610f2; /* Violet accent */
+    --background-color: #ffffff; /* Blanc */
+    --text-color: #212529; /* Noir */
+    --link-color: #007bff; /* Bleu des liens */
+    --link-hover-color: #0056b3; /* Bleu des liens au survol */
+  }
+  
+
+
+
 ::placeholder{
     color: black !important;
     font-size: 14px;
@@ -50,4 +69,24 @@ width: 5px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+
+/* style for card */
+
+.card__color{
+background: rgba(0, 128, 0, 0.194);
+color: green;
+font-size: 12px;
+width: 5rem;
+font-weight: 500;
+}
+
+.color_start{
+    color: gold;
+}
+
+.btn__card{
+    
+    color: var(--success-color);
 }

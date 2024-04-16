@@ -1,14 +1,16 @@
+import ProductCard from "./ProductCard";
+
 import React, { useState } from "react";
 
 // Liste des produits
 const products = [
   {
     id: 3,
-    name: "Maïs de bandundu",
-    price: 2.8,
+    name: "MAIS DE GOMA ",
+    price: 22.4,
+    soldprice: 10.8,
     category: "Maïs",
-    image:
-      "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712719232/photo%20produits/haricot_sos21u.jpg",
+    image:"https://res.cloudinary.com/dqrs3xyic/image/upload/v1712719232/photo%20produits/haricot_sos21u.jpg",
   },
   {
     id: 1,
@@ -36,8 +38,8 @@ const products = [
   },
   {
     id: 13,
-    name: "Croissants",
-    price: 1.1,
+    name: "MAIS DE GOMA",
+    price: 80000,
     category: "Haricot (niébé)",
     image:
       "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712719232/photo%20produits/haricot_sos21u.jpg",
@@ -89,6 +91,8 @@ const products = [
     category: "Charcuterie",
     image: "",
   },
+
+
 ];
 
 // Nombre d'articles par page
@@ -102,10 +106,7 @@ const ShoppingCartPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // 'asc' ou 'desc'
 
-  // Ajouter un produit au panier
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
+
 
   // Gérer le changement de page
   const handlePageChange = (page) => {
@@ -144,13 +145,13 @@ const ShoppingCartPage = () => {
 
   // Boutons pour les catégories
   const categoriesButtons = uniqueCategories.map((category) => (
-    <button
-      key={category}
+
+    <button key={category}
       className="text-left px-4 hover:bg-gray  hover:text-white"
-      onClick={() => filterProductsByCategory(category)}
-    >
+      onClick={() => filterProductsByCategory(category)}>
       {category}
     </button>
+
   ));
 
   // Produits triés et filtrés
@@ -227,30 +228,11 @@ const ShoppingCartPage = () => {
           </p>
         ) : (
           // Afficher les cartes de produits si currentProducts n'est pas vide
-          <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentProducts.map((product) => (
-              <div
-                key={product.id}
-                className="p-4 rounded-md overflow-hidden  border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-auto"
-                />
-                <div className="mt-4">
-                  <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
-                  <p className="text-gray-600 mb-2">${product.price}</p>
-                  <button
-                    className="bg-gray text-white py-2 px-4 rounded-md"
-                    onClick={() => addToCart(product)}
-                  >
-                    Acheter
-                  </button>
-                </div>
-              </div>
+          <ProductCard key={product.id} product={product} />
             ))}
-          </div>
+          </div> 
         )}
       </section>
     </div>
