@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const menuItems = [
-  { title: "Accueil", to: "/home" },
+  { title: "Accueil", to: "/" },
 
   {
     title: "Boutique en ligne",
