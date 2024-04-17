@@ -3,7 +3,7 @@ import React from "react";
 // Définition du composant de la carte de produit   
 const ProductCard = ({ product }) => {
   return (
-    <div className="p-4 rounded-md overflow-hidden border border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative">
+    <div className="p-4 rounded-md overflow-hidden  border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative">
       <img
         src={product.image}
         alt={product.name}
@@ -46,16 +46,16 @@ const ProductCard = ({ product }) => {
 
         <div>
           <div className="flex items-center gap-3 text-xs ">
-            <div className="flex p-1">
+            <div className="flex  items-center gap-2 p-1">
               <p>Mabele cop</p>
-              <img src="" alt="icon asbl" />
+              <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325531/image_2_egqwzk.webp" alt="icon asbl" className="size-6"/>
             </div>
 
-            <div className="flex ">
-              <p>partager le lien :</p>
-              {/* <img src="" alt="icon facebook" />
-              <img src="" alt="icon x" />
-              <img src="" alt="icon telegram" /> */}
+            <div className="flex gap-2 size-4">
+              <p className="whitespace-nowrap ">Partager le lien :</p>
+              <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713317745/icons/facebook_m5l0xb.svg" alt="icon facebook"  />
+              <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713317743/icons/twitter_xswuj1.svg" alt="icon x" />
+              <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713317743/icons/whatsapp-_uqvjf9.svg" alt="icon telegram" />
             </div>
           </div>
         </div>
@@ -65,7 +65,11 @@ const ProductCard = ({ product }) => {
             velit perferendis quidem voluptas amet, vero quas mollitia soluta!
           </p>
         </div>
-        <button className="w-full border mt-3 btn__card rounded-full p-2 hover:bg-light">Acheter</button>
+        <div className="flex item-center justify-center gap-3">
+        <button className="w-44 border mt-3 btn__card rounded-full p-2 hover:bg-light">Acheter</button>
+        {/* <button className="rounded-full border h-8"><img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325532/icons/heart-svgrepo-com_x0gb3a.svg" alt="" className="size-5" /></button> */}
+        </div>
+
       </div>
     </div>
   );

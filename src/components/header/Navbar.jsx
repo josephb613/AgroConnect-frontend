@@ -111,7 +111,7 @@ const menuItems = [
     title: "Boutique en ligne",
     to: "/marketplace",
     dropdown: [
-      { title: "Boutique en ligne", to: "/marketplace" },
+      { title: "Wenze ya kin", to: "/marketplace" },
       { title: "Pack alimentaire", to: "#" },
     ],
   },
