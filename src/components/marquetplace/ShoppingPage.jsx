@@ -21,6 +21,14 @@ const products = [
       "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712716568/photo%20produits/haricot2_qpepa3.jpg",
   },
   {
+    id: 1,
+    name: "Tomates Bio",
+    price: 3.5,
+    category: "Riz",
+    image:
+      "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712716568/photo%20produits/haricot2_qpepa3.jpg",
+  },
+  {
     id: 10,
     name: "Pommes de Terre",
     price: 1.6,
@@ -92,8 +100,8 @@ const products = [
     image: "",
   },
 
-
 ];
+
 
 // Nombre d'articles par page
 const ITEMS_PER_PAGE = 9;

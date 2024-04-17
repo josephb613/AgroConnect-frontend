@@ -18,8 +18,14 @@
     --link-hover-color: #0056b3; /* Bleu des liens au survol */
   }
   
-
-
+ /* header font style */
+  .font__style{
+color: var(--secondary-color);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+.input_bg{
+background-color: #dedede85;
+  }
 
 ::placeholder{
     color: black !important;
@@ -45,23 +51,16 @@ font-size: 14px;
 .fontHeader{
 color: gray;
 }
-
-/* .iconHeader img{
-width: 5px;
-} */
-
-.line{
-    height: 4rem;
-    width: 20px;
-    margin-bottom: -0.4rem !important;
-    color: gray;
-} 
-
-
+ 
 .TestimonialBanner{
     width: 100%;
 
 }
+/* input size */
+.size{
+width: 27rem;
+}
+
 
 
 .paramsCategories {
