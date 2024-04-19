@@ -16,7 +16,7 @@ const FaqsCard = (props) => {
 
     return (
         <div 
-            className="space-y-3 mt-5 overflow-hidden "
+            className=" space-y-3 mt-5 overflow-hidden "
             key={idx}
             onClick={handleOpenAnswer}
         >
@@ -77,7 +77,7 @@ export default () => {
     ]
   
     return (
-        <section className="leading-relaxed mb-10 mx-auto px-4 md:px-8">
+        <section className="border  mb-10 mx-auto px-4 md:px-8">
             <div className="space-y-3 text-center mb-15">
                 <h1 className="text-3xl text-gray-800 font-semibold">
                     FAQ
@@ -86,7 +86,7 @@ export default () => {
                 Votre guide complet pour comprendre comment notre plateforme en ligne révolutionne la chaîne de valeur agricole
                 </p>
             </div>
-            <div className="mt-5 font-thin  max-w-3xl mx-auto">
+            <div className="mt-5 border  font-thin  max-w-3xl mx-auto">
                 {
                     faqsList.map((item, idx) => (
                         <FaqsCard

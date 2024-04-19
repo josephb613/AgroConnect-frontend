@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export default function PackAlimentaire() {
+export default function FoodPack() {
   return (
     <>
     <h1>welcome</h1>

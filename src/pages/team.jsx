@@ -1,6 +1,4 @@
 import React from "react"
-import Footer from "../components/Footer/footer";
-import Navbar from "../components/header/Navbar";
 
 export default function Team () {
 
@@ -65,10 +63,9 @@ export default function Team () {
 
     
         <div>
-            <Navbar/>
             <section className="py-14">
             <div className="max-w-screen-xl mx-auto px-4  mb-12 md:px-8">
-                <div className="max-w-xl  ml-[30%] mb-44  text-center">
+                <div className="max-w-xl  ml-[30%] mb-44 border text-center">
                     <h3 className="text-gray text-3xl font-semibold sm:text-4xl">
                     Rencontrez Notre Équipe
                     </h3>
@@ -112,7 +109,6 @@ export default function Team () {
             </div>
            
             </section>
-            <Footer/>
         </div>
 
   );

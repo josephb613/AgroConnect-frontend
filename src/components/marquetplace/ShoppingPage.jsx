@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 
 import React, { useState } from "react";
 
@@ -10,15 +11,7 @@ const products = [
     price: 22.4,
     soldprice: 10.8,
     category: "Maïs",
-    image:"https://res.cloudinary.com/dqrs3xyic/image/upload/v1712719232/photo%20produits/haricot_sos21u.jpg",
-  },
-  {
-    id: 1,
-    name: "Tomates Bio",
-    price: 3.5,
-    category: "Riz",
-    image:
-      "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712716568/photo%20produits/haricot2_qpepa3.jpg",
+    image: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712719232/photo%20produits/haricot_sos21u.jpg",
   },
   {
     id: 1,
@@ -100,6 +93,7 @@ const products = [
     image: "",
   },
 
+
 ];
 
 
@@ -155,7 +149,7 @@ const ShoppingCartPage = () => {
   const categoriesButtons = uniqueCategories.map((category) => (
 
     <button key={category}
-      className="text-left px-4 hover:bg-gray  hover:text-white"
+      className="text-left px-4 hover_bg"
       onClick={() => filterProductsByCategory(category)}>
       {category}
     </button>
@@ -187,10 +181,11 @@ const ShoppingCartPage = () => {
   );
 
   return (
-    <div className="p-4 w-full gap-10  flex flex-col lg:flex-row">
+    <div className="p-4 w-full shadow    gap-10  flex flex-col lg:flex-row">
+
       {/* Section des catégories */}
-      <section className=" border shadowrounded p-5 ">
-        <div className="flex items-center   border-gray rounded border">
+      <section className="shadow  rounded p-5 ">
+        <div className="flex shadow  items-center   border-gray rounded border">
           <input
             type="text"
             placeholder="Rechercher des produits..."
@@ -208,20 +203,36 @@ const ShoppingCartPage = () => {
 
         <div className=" mt-6 p-3  rounded paramsCategories  ">
           <div className="px-4">
-            <h2 className="text-sm font-bold">PAR CATÉGORIES</h2>
+            <h2 className="text-green font-extrabold">PAR CATÉGORIES</h2>
           </div>
           <hr className=" border-1  border-gray " />
           <button
             onClick={() => filterProductsByCategory("")}
-            className="text-left px-4"
-          >
+            className="text-left  px-4">
             Voir tout
           </button>
           {categoriesButtons}
         </div>
+        {/* banner image */}
+
+        <div className="h-[50%] relative">
+        <h2 className="mt-10 mb-5 text-green  ml-8 font-extrabold">NOS PRODUITS</h2>
+          <div className="absolute z-50 mt-10 ml-4 text-white">
+           
+            <h3 className="  font-normal text-xm mb-2">PRODUITS DE GROS
+            </h3>
+        
+            <p className=" font-bold   text-2xl">Tous vos produits agricoles ne gros</p>
+            <p className="text-bg-gold mb-10 font-bold ">A partir de 500 kg </p>
+            <Link to="#" className="border w-24  p-2">Voire les produits</Link>
+       
+          </div>
+          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie " className="absolute h-[80%]" />
+        </div>
+        
       </section>
       {/*  Tri par défaut*/}
-      <section className="p-5 border  rounded  border-gray w-full lg:w-3/4">
+      <section className="p-5 rounded  shadow border-gray w-full lg:w-3/4">
         <button
           className="px-4 py-2 mb-4 lg:ml-[85%]  rounded-md border border-gray"
           onClick={handleSort}
@@ -231,16 +242,14 @@ const ShoppingCartPage = () => {
 
         {/* Afficher un message "Aucun produit en ce nom" si currentProducts est vide */}
         {currentProducts.length === 0 ? (
-          <p className="text-center ">
-            Aucun produit ne correspond à votre recherche
-          </p>
+          <p className="text-center "> Aucun produit ne correspond à votre recherche</p>
         ) : (
           // Afficher les cartes de produits si currentProducts n'est pas vide
           <div className="grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product={product} />
             ))}
-          </div> 
+          </div>
         )}
       </section>
     </div>

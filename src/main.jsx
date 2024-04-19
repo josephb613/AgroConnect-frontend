@@ -11,6 +11,8 @@ import MarketPlace from "./pages/marketplace";
 import Offers from "./pages/Offers";
 import AboutUs from "./pages/AboutUs";
 import Team from "./pages/team";
+// import FoodPack from "./pages/FoodPack";
+import Bourses from "./pages/Bourses";
 // import Marche from "./pages/marche";
 // import Login from "./pages/auth/login";
 
@@ -22,8 +24,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/", 
-        element: <Home/>
-     
+        element: <Home/>,
+        children: [
+
+          // {
+          //   path: "home",
+          //   element:  </>
+          // },
+        ]
       },
       {
         path: "MarketPlace",
@@ -44,10 +52,16 @@ const router = createBrowserRouter([
         element: <Team/>
      
       },
-  
-
+      // {
+      //   path: "FoodPack", 
+      //   element: <FoodPack/>
+     
+      // },
+      {
+        path: "Bourses", 
+        element: <Bourses/>
+      },
     ],
-
   },
 ]);
 

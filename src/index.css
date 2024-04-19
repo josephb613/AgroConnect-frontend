@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+
+size: 12px;
+
+}
+
 :root {
     --primary-color: #007bff; /* Bleu primaire */
     --secondary-color: #6c757d; /* Gris foncé */
@@ -89,3 +95,10 @@ font-weight: 500;
     
     color: var(--success-color);
 }
+
+/* ccs form shopping page  */
+/* .hover_bg:hover{
+background-color: rgba(26, 151, 44, 0.401);
+color: white;
+border-radius: 5px;
+} */

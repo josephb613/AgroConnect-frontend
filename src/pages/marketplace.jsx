@@ -1,24 +1,18 @@
-import React from 'react';
-import Header from "../components/header/Header";
-import CarrouselMarketPlace from '../components/marquetplace/carouselMarPlace';
-import Footer from "../components/Footer/footer";
+import React from "react";
+import CarrouselMarketPlace from "../components/marquetplace/CarouselMarPlace";
 import ShoppingPage from "../components/marquetplace/ShoppingPage"
-// import ShoppingCartPage from '../components/marquetplace/ShoppingCartPage';
+import CarouselNewProduct from "../components/marquetplace/CarouselNewProduct";
+
 
 export default function MarketPlace() {
   
   return (
     <div>
-    <Header/>
     <CarrouselMarketPlace/>
-    <ShoppingPage/>
-    {/* <ShoppingCartPage/> */}
+    <ShoppingPage/> 
     <br />
     <br />
-    <br />
-    <br />
-    <br />
-    <Footer/>
+    <CarouselNewProduct/>
     </div>
   ); 
 }

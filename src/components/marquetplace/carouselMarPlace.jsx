@@ -8,19 +8,20 @@ import '@splidejs/react-splide/css';
 export default function CarrouselMarketPlace() {
   const slidesData = [
     {
-      videoUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
+      imgUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
       // iconUrl: "",
       // text: "",
       // title: "",
       // sommaire: "",
       // description: ""
     },
-    {
-      videoUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
-      // title: "",
-      // sommaire: "",
-      // description: ""
-    },
+    // {
+    //   imgUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
+
+    // },
+    // {
+    //   imgUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
+    // },
 
   ];
 
@@ -29,13 +30,13 @@ export default function CarrouselMarketPlace() {
       options={{
         rewind: true,
         autoplay: true,
-        interval: 3000,
+        interval: 5500,
         arrows: false,
       }}>
       {slidesData.map((slide, index) => (
         <SplideSlide key={index}>
           <div className="relative ">
-            <video src={slide.videoUrl} alt={`Image ${index + 1}`} className="size_carousel" />
+            <video src={slide.imgUrl} alt={`Image ${index + 1}`} className="size_carousel" />
             <div className="absolute flex-col top-0 left-0 right-0 bottom-0 flex justify-center items-center  text-white">
             <div className=' text-justify h-56 flex flex-col justify-center -mt-28 -ml-[49%] absolute'>
             <p className=" text-xs absolute -mt-48">{slide.text}</p>
