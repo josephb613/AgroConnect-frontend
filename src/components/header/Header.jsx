@@ -14,7 +14,7 @@ function MenuButton({ onClick }) {
 // Composant pour la barre de recherche
 function SearchBar() {
   return (
-    <div className="relative border ml-28 flex items-center">
+    <div className="relative ml-28 flex items-center">
       <input
         className="border w-96 rounded-full px-4 py-2 focus:outline-none h-9"
         type="text"

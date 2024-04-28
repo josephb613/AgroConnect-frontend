@@ -5,7 +5,6 @@ import "./index.css";
 
 // *** import components//
 import Root from "./routes/root";
-// import ErrorPage from "./pages/ErrorePage";
 import Home from "./pages/home";
 import MarketPlace from "./pages/marketplace";
 import Offers from "./pages/Offers";
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
-    // errorElement: <ErrorPage />,
     children: [
       {
         path: "/", 

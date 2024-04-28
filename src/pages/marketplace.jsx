@@ -1,5 +1,5 @@
 import React from "react";
-import CarrouselMarketPlace from "../components/marquetplace/CarouselMarPlace";
+import CarrouselMarketPlace from "../components/marquetplace/carouselMarPlace";
 import ShoppingPage from "../components/marquetplace/ShoppingPage"
 import CarouselNewProduct from "../components/marquetplace/CarouselNewProduct";
 
