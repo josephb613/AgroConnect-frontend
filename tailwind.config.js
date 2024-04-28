@@ -21,6 +21,8 @@ export default {
       'text-gray':'#757575',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
+      'border-line': '#878680',
+      'red': '#fb1414',
     },
   },
   plugins: [("daisyui")],

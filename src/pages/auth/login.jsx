@@ -1,10 +1,18 @@
 import React from 'react';
+import { Outlet } from "react-router-dom";
+// import Home from '../home';
+
 
 
 export default function  Login () {
     return (
-        <main className="w-full flex ">
-            <div className="relative flex-1 hidden items-center justify-center h-screen bg-gray-900 lg:flex">
+        
+
+        <main>
+             <Outlet className="border"/>
+            <div>
+           
+            <div className="relative flex-1 hidden items-center justify-center h-screen border bg-gray-900 lg:flex">
                 <div className="relative z-10 w-full max-w-md">
                     <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325532/logo_cvzsvy.svg" />
                     <div className=" mt-16 space-y-3">
@@ -127,6 +135,9 @@ export default function  Login () {
                     </form>
                 </div>
             </div>
+            <div className='border'>
+      </div>
+      </div>
         </main>
     )
 }

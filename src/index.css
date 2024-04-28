@@ -80,15 +80,21 @@ width: 27rem;
 /* style for card */
 
 .card__color{
-background: rgba(0, 128, 0, 0.194);
-color: green;
-font-size: 12px;
-width: 5rem;
+color: #f8f9fa;
+
+font-size: 10px;
+width: 4rem;
 font-weight: 500;
 }
-
+.fontsize{
+    font-size: 15px;
+    color: #6c757d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .color_start{
-    color: gold;
+    color: #ea7f0c;
+    color: #ff000090;
+
 }
 
 .btn__card{

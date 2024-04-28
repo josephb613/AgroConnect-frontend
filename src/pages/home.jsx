@@ -7,6 +7,8 @@ import BannerHeroSction from "../components/heroSection/BannerHeroSction";
 import FaqsList from "../components/FaqsList";
 
 
+
+
 export default function Home() {
   return (
     <div className="p-0 b-0 m-0">
@@ -14,6 +16,7 @@ export default function Home() {
       <BannerHeroSction />
       <Testimonial />
       <FaqsList />
+
     </div>
   );
 }

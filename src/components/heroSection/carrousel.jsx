@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import './Responsive.css'; // Assurez-vous d'importer votre fichier CSS ici
+import './Responsive.css';
 
 // Default theme
 // import "@splidejs/react-splide/css";
@@ -20,11 +20,7 @@ export default function Carrousel() {
     {
       imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712914072/Banner%20publicite/banner_2_zwpsoa.jpg",
 
-    },
-    {
-      imgUrl: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1712914072/Banner%20publicite/banner_2_2_ly9udz.jpg",
-    },
-
+    }
   ];
 
   return (
