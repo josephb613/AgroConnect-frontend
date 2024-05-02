@@ -32,10 +32,10 @@ function DropdownMenu({ onClose }) {
   return (
     <div className="absolute bg-white  ml-6 w-48 h-52 mt-2  rounded-lg shadow-lg" onMouseLeave={onClose}>
       <NavLink to="#" className="block text-center whitespace-nowrap px-4 py-2  hover:text-white hover:bg-green">
-        Je suis un professionnel
+        Je suis un vendeur
       </NavLink>
       <NavLink to="/Login" className="block  text-center px-4 py-2  hover:text-white  hover:bg-green">
-        Je suis un particulier
+        Je suis un acheteur
       </NavLink>
 <hr />
       <div className="mt-2 text-center">
@@ -43,9 +43,10 @@ function DropdownMenu({ onClose }) {
     
         <NavLink className="border  text-sm font-thin rounded-full text-white bg-green p-2 hover:bg-white  hover:text-green">Me connecter</NavLink>
       </div>
+
       <div className="text-center mt-4 h-10  w-full">
         <h4 className="">Vous êtes nouveau client ?</h4>
-        <NavLink to="#" className="font-thin  mt-10 underline font-xs  text-red rounded p-2">Créer un compte</NavLink>
+        <NavLink to="/SignUp.jsx" className="font-thin  mt-10 underline font-xs  text-red rounded p-2">Créer un compte</NavLink>
       </div>
     </div>
   );
@@ -64,15 +65,14 @@ function AdditionalLinks() {
   };
 
   return (
+
     <ul className="flex ml-24 text-sm gap-6">
-      <NavLink to="/contact" className="flex items-center gap-2">
+      <NavLink to="/" className="flex items-center gap-2">
         <p>Nous contacter</p>
-        <img
-          src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713308189/icons/Vector_vsb6mc.svg"
-          alt="icon contact"
-          className="w-5 h-5"
-        />
+        <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713308189/icons/Vector_vsb6mc.svg"
+          alt="icon contact" className="w-5 h-5"/>
       </NavLink>
+
 
       <li className="relative">
         <button onClick={toggleDropdown} className="flex items-center gap-2">

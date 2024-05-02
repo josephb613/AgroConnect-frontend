@@ -40,8 +40,8 @@ const menuItems = [
     dropdown: [
       { title: "Notre Équipe", to: "/team" },
       { title: "Nos Partenaires", to: "/CreateAccount" },
-      { title: "Nos Valeurs", to: "ProductDetailPage" },
-      { title: "Notre Vision", to: "" },
+      { title: "Nos Valeurs", to: "/ProductDetailPage" },
+      { title: "Notre Vision", to: "/SignUp" },
     ],
   },
 ];

@@ -6,12 +6,10 @@ import { Outlet } from "react-router-dom";
 
 export default function  Login () {
     return (
-        
 
         <main>
              <Outlet className="border"/>
             <div>
-           
             <div className="relative flex-1 hidden items-center justify-center h-screen border bg-gray-900 lg:flex">
                 <div className="relative z-10 w-full max-w-md">
                     <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325532/logo_cvzsvy.svg" />

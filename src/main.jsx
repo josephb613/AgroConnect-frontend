@@ -10,12 +10,11 @@ import MarketPlace from "./pages/marketplace";
 import Offers from "./pages/Offers";
 import AboutUs from "./pages/AboutUs";
 import Team from "./pages/team";
-// import FoodPack from "./pages/FoodPack";
 import Bourses from "./pages/Bourses";
-// import Marche from "./pages/marche";
 import Login from "./pages/auth/login";
- import CreateAccount from "./pages/CreateAccount";
-import ProductDetailPage from "./pages/Productdetailpage";
+ import ProductDetailPage from "./components/ProductDetailPage.jsx";
+import SignUp from "./pages/auth/SignUp";
+
 
 const router = createBrowserRouter([
   {
@@ -57,8 +56,8 @@ const router = createBrowserRouter([
      
       },
       {
-        path: "CreateAccount", 
-        element: <CreateAccount/>
+        path: "ProductDetailPage", 
+        element: <ProductDetailPage/>
      
       },
       {
@@ -66,9 +65,13 @@ const router = createBrowserRouter([
         element: <Bourses/>
       },
       {
-        path: "ProductDetailPage", 
-        element: <ProductDetailPage/>
+        path: "Bourses", 
+        element: <Bourses/>
       },
+      {
+        path: "SignUp", 
+        element: <SignUp/>
+      }
     ],
   },
 ]);
