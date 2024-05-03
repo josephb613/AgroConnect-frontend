@@ -41,12 +41,12 @@ function DropdownMenu({ onClose }) {
       <div className="mt-2 text-center">
         <h2 className="font-bold mb-3">Connecter-vous</h2>
     
-        <NavLink className="border  text-sm font-thin rounded-full text-white bg-green p-2 hover:bg-white  hover:text-green">Me connecter</NavLink>
+        <NavLink to="/login" className="border  text-sm font-thin rounded-full text-white bg-green p-2 hover:bg-white  hover:text-green">Me connecter</NavLink>
       </div>
 
       <div className="text-center mt-4 h-10  w-full">
         <h4 className="">Vous êtes nouveau client ?</h4>
-        <NavLink to="/SignUp.jsx" className="font-thin  mt-10 underline font-xs  text-red rounded p-2">Créer un compte</NavLink>
+        <NavLink to="/signup" className="font-thin  mt-10 underline font-xs  text-red rounded p-2">Créer un compte</NavLink>
       </div>
     </div>
   );
@@ -67,6 +67,7 @@ function AdditionalLinks() {
   return (
 
     <ul className="flex ml-24 text-sm gap-6">
+
       <NavLink to="/" className="flex items-center gap-2">
         <p>Nous contacter</p>
         <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713308189/icons/Vector_vsb6mc.svg"

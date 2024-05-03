@@ -115,7 +115,7 @@ export default function Home() {
 
       <section className="mt-12">
         <div className="flex items-center relative justify-center">
-          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1714603456/Frame_xvhbiw.jpg" alt="" className="w-[95%]" />
+          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1714220251/Projet%20Agroconnect/Default_Imagine_a_scene_where_an_African_female_farmer_works_i_1_qngz89.jpg" alt="" className="w-[95%]" />
         </div>
 
        <div>

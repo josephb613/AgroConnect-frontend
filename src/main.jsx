@@ -14,6 +14,7 @@ import Bourses from "./pages/Bourses";
 import Login from "./pages/auth/login";
  import ProductDetailPage from "./components/ProductDetailPage.jsx";
 import SignUp from "./pages/auth/SignUp";
+import UserDashboard from "./layout/User_Dashboard.jsx";
 
 
 const router = createBrowserRouter([
@@ -24,22 +25,17 @@ const router = createBrowserRouter([
       {
         path: "/", 
         element: <Home/>,
-        children: [
 
-          {
-            path: "/login",
-            element:  <Login/>
-          },
-        ]
+      },
+      {
+        path: "/login",
+        element:  <Login/>
       },
       {
         path: "MarketPlace",
         element: <MarketPlace/>
       },
-      {
-        path: "login",
-        element:  <Login/>
-      },
+   
       {
         path: "Offers", 
         element: <Offers/>
@@ -64,13 +60,17 @@ const router = createBrowserRouter([
         path: "Bourses", 
         element: <Bourses/>
       },
+      // {
+      //   path: "Bourses", 
+      //   element: <Bourses/>
+      // },
       {
-        path: "Bourses", 
-        element: <Bourses/>
+        path: "/signup", 
+        element: <SignUp/>
       },
       {
-        path: "SignUp", 
-        element: <SignUp/>
+        path: "UserDashboard", 
+        element: <UserDashboard/>
       }
     ],
   },

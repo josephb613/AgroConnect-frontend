@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import { Link } from "react-router-dom";
  import ProductActions from "../ProductActions";
@@ -28,10 +27,7 @@ const ProductCard = ({ product }) => {
 
   return (
 
-    <div className="p-3 shadow rounded-md overflow-hidden border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative">
-     {/* <Link to="/Productdetail.jsx"><img src={image} to="#" className="w-full h-44 " /></Link> */}
-
-
+    <div className="p-3 border shadow rounded-md overflow-hidden border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative">
      <Link to="/ProductDetailPage" className="hover:opacity-75">
      <img src={image} alt="Product" className="w-full  h-44" />
       </Link>

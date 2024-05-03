@@ -31,9 +31,9 @@ export default function Team () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1713099489/Team/Capture_d_e%CC%81cran_2024-04-14_a%CC%80_13.55.25_qogwnu.png",
-            name: "Junior Asosa",
-            title: "FullStack developper",
+            avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1714758547/Capture_d_e%CC%81cran_2024-05-03_a%CC%80_18.48.43_pn3tq1.png",
+            name: "Dieuleveux",
+            title: "Co-founder",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
             linkedin: "javascript:void(0)",
             // twitter: "javascript:void(0)",

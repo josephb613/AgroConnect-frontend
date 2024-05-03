@@ -39,9 +39,9 @@ const menuItems = [
     to: "/AboutUs",
     dropdown: [
       { title: "Notre Équipe", to: "/team" },
-      { title: "Nos Partenaires", to: "/CreateAccount" },
-      { title: "Nos Valeurs", to: "/ProductDetailPage" },
-      { title: "Notre Vision", to: "/SignUp" },
+      { title: "Nos Partenaires", to: "" },
+      { title: "Nos Valeurs", to: "ProductDetailPage" },
+      { title: "Notre Vision", to: "" },
     ],
   },
 ];
