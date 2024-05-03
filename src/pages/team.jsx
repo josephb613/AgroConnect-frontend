@@ -32,7 +32,7 @@ export default function Team () {
         },
         {
             avatar: "https://res.cloudinary.com/dqrs3xyic/image/upload/v1714758547/Capture_d_e%CC%81cran_2024-05-03_a%CC%80_18.48.43_pn3tq1.png",
-            name: "Dieuleveux",
+            name: "Dieuleveut Ngele",
             title: "Co-founder",
             desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy",
             linkedin: "javascript:void(0)",
