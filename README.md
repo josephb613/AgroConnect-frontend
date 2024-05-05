@@ -37,8 +37,8 @@ L'objectif principal d'Agroconnect est de créer un écosystème numérique dyna
 
 La Plateforme Agroconnect est développée en utilisant les technologies suivantes :
 
-- **Frontend** : HTML,tailwinds css, JavaScript, React.js
-- **Backend** : Node.js, Express.js
+- **Frontend** : Tailwinds css, JavaScript, React.js
+- **Backend** : Node.js, Express.js,
 - **Base de Données** : MongoDB
 - **Autres Outils** :  Axios (pour les requêtes HTTP) etc..
 
