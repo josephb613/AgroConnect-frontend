@@ -18,16 +18,16 @@ const StockButton = ({ stock }) => {
 const IconWithText = ({ text, iconSrc }) => (
   <div className="flex whitespace-nowrap  items-center gap-2 p-1">
     {text}
-    <img src={iconSrc} alt="icon" className="size-6 border" />
+    <img src={iconSrc} alt="icon" className="size-6 " />
   </div>
 );
 
 const ProductCard = ({ product }) => {
-  const { name, image, stock, ratings, quantity, price, entity } = product;
+  const { name, image, stock, quantity, price, entity } = product;
 
   return (
 
-    <div className="p-3 border shadow rounded-md overflow-hidden border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative">
+    <div className="p-3  shadow rounded-md overflow-hidden border-gray hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 relative">
      <Link to="/ProductDetailPage" className="hover:opacity-75">
      <img src={image} alt="Product" className="w-full  h-44" />
       </Link>
@@ -39,25 +39,14 @@ const ProductCard = ({ product }) => {
           <StockButton stock={stock} />
         </div>
 
-        <div className="flex  mb-5 fontsize  mt-3 gap-1 ">
-          <div className="flex gap-2">
-            <ul className="color_start">★★★★</ul>
-            <Link to="#" className="">{ratings.count} {ratings.reviews}</Link>
-          </div>
-          •
-          <div>
-            <span className="font-thin rounded p-1">
-              Total dispo : {quantity.amount} {quantity.unit}
-            </span>
-          </div>
+        <div className="flex font-thin ml-10  rounded justity-center  items-center mb-5 fontsize  mt-3 gap-4 ">
+            <div className="color_start">★★★★</div>
+             <div>Total dispo : {quantity.amount} {quantity.unit}</div> 
+            <p>{price.amount} {price.currency} {price.unit}</p>
         </div>
 
         <div className="justify-center items-center flex gap-2 ">
-          <div>
-            <p>{price.amount} {price.currency} {price.unit}</p>
-          </div>
-          {/* <p className="font-semibold">80.000 FC</p>
-          <button className="font-sm rounded-2xl p-2">Solde-64%</button> */}
+          
         </div>
 
         <hr className="bg-gray mt-2 mb-3" />
@@ -89,5 +78,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
-
+export default ProductCard; 

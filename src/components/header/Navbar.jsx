@@ -9,7 +9,7 @@ const menuItems = [
     to: "/marketplace",
     dropdown: [
       { title: "Boutique en ligne", to: "/marketplace" },
-      { title: "Pack alimentaire", to: "#" },
+      { title: "Pack alimentaire", to: "/offerForm" },
     ],
   },
 
