@@ -89,56 +89,56 @@
 
 // export default ArticleForm;
 
-import React, { useState } from 'react';
-import axios from 'axios';
+// import React, { useState } from 'react';
+// import axios from 'axios';
 
-const ProductsForm = () => {
-  const [product, setProduct] = useState({
-    title: '',
-    description: '',
-    imageUrl: '',
-    price: 0,
-  });
+// const ProductsForm = () => {
+//   const [product, setProduct] = useState({
+//     title: '',
+//     description: '',
+//     imageUrl: '',
+//     price: 0,
+//   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProduct({ ...product, [name]: value });
-  };
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setProduct({ ...product, [name]: value });
+//   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('/api/products', product);
-      console.log(response.data);
-    } catch (error) {
-      console.error('Erreur lors de la création du produit :', error);
-    }
-  };
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+//       const response = await axios.post('/api/products', product);
+//       console.log(response.data);
+//     } catch (error) {
+//       console.error('Erreur lors de la création du produit :', error);
+//     }
+//   };
 
-  return (
-    <div className="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-xl font-semibold mb-4">Créer un nouveau produit</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="title" className="block mb-2">Titre:</label>
-          <input type="text" id="title" name="title" value={product.title} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="description" className="block mb-2">Description:</label>
-          <input type="text" id="description" name="description" value={product.description} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="imageUrl" className="block mb-2">URL de l'image:</label>
-          <input type="text" id="imageUrl" name="imageUrl" value={product.imageUrl} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="price" className="block mb-2">Prix:</label>
-          <input type="number" id="price" name="price" value={product.price} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
-        </div>
-        <button type="submit" className="bg-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Créer</button>
-      </form>
-    </div>
-  );
-};
+//   return (
+//     <div className="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md">
+//       <h2 className="text-xl font-semibold mb-4">Créer un nouveau produit</h2>
+//       <form onSubmit={handleSubmit}>
+//         <div className="mb-4">
+//           <label htmlFor="title" className="block mb-2">Titre:</label>
+//           <input type="text" id="title" name="title" value={product.title} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
+//         </div>
+//         <div className="mb-4">
+//           <label htmlFor="description" className="block mb-2">Description:</label>
+//           <input type="text" id="description" name="description" value={product.description} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
+//         </div>
+//         <div className="mb-4">
+//           <label htmlFor="imageUrl" className="block mb-2">URL de l'image:</label>
+//           <input type="text" id="imageUrl" name="imageUrl" value={product.imageUrl} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
+//         </div>
+//         <div className="mb-4">
+//           <label htmlFor="price" className="block mb-2">Prix:</label>
+//           <input type="number" id="price" name="price" value={product.price} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
+//         </div>
+//         <button type="submit" className="bg-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Créer</button>
+//       </form>
+//     </div>
+//   );
+// };
 
-export default ProductsForm;
+// export default ProductsForm;
