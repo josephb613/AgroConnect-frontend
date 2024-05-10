@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 
@@ -134,6 +135,3 @@ const ShoppingCartPage = () => {
 };
 
 export default ShoppingCartPage;
-
-
-
