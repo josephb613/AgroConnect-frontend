@@ -12,7 +12,7 @@ const ShoppingCartPage = () => {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        "http://localhost:30001/api/products"
+        "https://capstone2-c2-josephb613.onrender.com/api/product"
       );
       console.log(response)
       const data = await response.json();
