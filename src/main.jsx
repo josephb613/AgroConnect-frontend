@@ -14,6 +14,7 @@ import Bourses from "./pages/Bourses";
 import Login from "./pages/auth/login";
  import ProductDetailPage from "./components/ProductDetailPage.jsx";
 import SignUp from "./pages/auth/SignUp";
+import ArticleForm from "./components/marquetplace/ArticleForm.jsx";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
       {
         path: "AboutUs", 
         element: <AboutUs/>
+     
+      },
+      {
+        path: "ArticleForm", 
+        element: <ArticleForm/>
      
       },
       {

@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import CategoryFilter from "./CategoryFilter";
 import Loader from "./Loader";
+import ButtonSell from "../button/ButtonSell";
 import ProductSearchBar from "./ProductSearchBar";
+import { Link } from "react-router-dom";
 
 const ShoppingCartPage = () => {
   const [products, setProducts] = useState([]);
@@ -51,6 +53,10 @@ const ShoppingCartPage = () => {
         <div className="mt-2 p-5">
         <ProductSearchBar onSearch={handleSearch} /> 
         </div>
+
+      
+       <ButtonSell/>
+
         <CategoryFilter
           categories={uniqueCategories}
           filterProductsByCategory={filterProductsByCategory}
