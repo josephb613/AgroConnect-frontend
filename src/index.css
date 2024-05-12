@@ -34,10 +34,11 @@ background-color: #dedede85;
   }
 
 ::placeholder{
-    color: black !important;
+    color: rgb(255, 255, 255) !important;
     font-size: 14px;
     font-weight: 100;
 }
+
 
  .Navigation{
 display: flex;
