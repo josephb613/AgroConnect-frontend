@@ -110,7 +110,7 @@ border-radius: 5px;
 } */
 
 
-
+/* 
 
 .flower {
     position: absolute;
@@ -118,6 +118,40 @@ border-radius: 5px;
     height: 30px;
     opacity: 0;
     animation: explode 0.5s forwards;
+  }
+  
+  @keyframes explode {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5) translate(var(--x), var(--y));
+    }
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    animation: marquee 10s linear infinite;
+  }
+   */
+
+
+   .flower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    animation: explode 0.5s forwards;
+    animation-delay: var(--delay);
   }
   
   @keyframes explode {
