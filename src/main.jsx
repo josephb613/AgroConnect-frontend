@@ -16,12 +16,14 @@ import Login from "./pages/auth/login";
 import SignUp from "./pages/auth/SignUp";
 import ArticleForm from "./components/marquetplace/ArticleForm.jsx";
 import Modal from "./components/modals/Modal.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/", 
