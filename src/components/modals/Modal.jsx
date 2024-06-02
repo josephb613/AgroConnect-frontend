@@ -73,10 +73,10 @@
 
 // export default Modal;
 
-
-import React, { useState, useRef, useEffect } from "react";
-import { AiOutlineClose } from 'react-icons/ai';
-import FlowerExplosion from './FlowerExplosion';
+import React from "react";
+import { useState, useRef, useEffect } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import FlowerExplosion from "./FlowerExplosion";
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(true);
