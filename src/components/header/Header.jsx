@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 // Composant pour le bouton de menu mobile
 function MenuButton({ onClick }) {
   return (
-    <button className="sm:hidden bg-green text-white rounded-full p-2" onClick={onClick}>
+    <button className="sm:hidden bg-green text-white  rounded-full p-2" onClick={onClick}>
       <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712757559/icons/menucat_arixfc.svg" alt="icon menu" className="size-3" />
     </button>
   );
@@ -101,7 +101,7 @@ export default function Header() {
     <header className="relative z-20">
       <div className="flex  gap-64 px-4  py-1 bg-white">
         <div className="flex relative justify-center items-center">
-          <NavLink to="/home">
+          <NavLink to="/">
             <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325532/logo_cvzsvy.svg" alt="logo" className="w-24 md:ml-10 mt-3" />
           </NavLink>
           <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1712325620/icons/line_dqk9lw.svg" alt="icon line" className="h-20 lg:ml-52 lg:mt-10 absolute w-2" />
