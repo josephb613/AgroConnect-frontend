@@ -15,6 +15,7 @@ import Login from "./pages/auth/login";
  import ProductDetailPage from "./components/ProductDetailPage.jsx";
 import SignUp from "./pages/auth/SignUp";
 import ArticleForm from "./components/marquetplace/ArticleForm.jsx";
+import Modal from "./components/modals/Modal.jsx";
 
 
 const router = createBrowserRouter([
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "/signup", 
         element: <SignUp/>
+      },
+      {
+        path: "modal ", 
+        element: <Modal/>
       },
     ],
   },
