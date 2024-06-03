@@ -144,7 +144,7 @@ border-radius: 5px;
   }
    */
 
-
+/* animation explosion  */
    .flower {
     position: absolute;
     width: 30px;
@@ -177,3 +177,41 @@ border-radius: 5px;
     animation: marquee 10s linear infinite;
   }
   
+  /* animation explosion  */
+
+  .shopping-cart-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 20%; /* ou la largeur que vous souhaitez */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding-left: 20%; /* Assurez-vous que le contenu principal ne soit pas masqué par la barre latérale */
+    overflow-y: auto; /* Permet au contenu principal de défiler si nécessaire */
+  }
+  
+
+
+  /* home card */
+  .main-container {
+    overflow: hidden;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }

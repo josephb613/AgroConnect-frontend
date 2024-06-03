@@ -95,7 +95,7 @@ const Modal = () => {
     setIsExploding(true);
     setTimeout(() => {
       setIsOpen(false);
-    }, 500); // Durée de l'animation d'explosion
+    }, 500);
   };
 
   return (
@@ -104,7 +104,7 @@ const Modal = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 w-11/12 md:w-1/2 lg:w-1/3">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold">🚧Attention 🚧</h2>
+              <h2 className="text-xl font-bold">🚧 Attention 🚧</h2>
               <button ref={buttonRef} onClick={closeModal}>
                 <AiOutlineClose className="h-6 w-6 text-gray" />
               </button>

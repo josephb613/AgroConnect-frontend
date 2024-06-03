@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 // Default theme
@@ -14,15 +14,7 @@ export default function CarrouselMarketPlace() {
       // title: "",
       // sommaire: "",
       // description: ""
-    },
-    // {
-    //   imgUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
-
-    // },
-    // {
-    //   imgUrl: "https://res.cloudinary.com/dqrs3xyic/video/upload/v1712925298/Banner%20publicite/Mes_bannie%CC%80re_projet_Agroconnect_zp8xki.mp4",
-    // },
-
+    }
   ];
 
   return (
