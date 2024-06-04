@@ -28,7 +28,7 @@ export default function CardGrid() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="grid ml-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-x-0-10 gap-y-12">
       {loading ? (
         <Loader loading={loading} />
       ) : (

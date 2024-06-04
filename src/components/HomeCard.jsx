@@ -1,32 +1,28 @@
-import React from 'react';
-
+import React from "react";
 export default function HomeCard({ discount, title, price, oldPrice, image }) {
   return (
-    <div className='main-container bordere w-[286.52px] h-[370.047px] bg-[#fff] rounded-[7.77px] relative overflow-hidden shadow-[0_0.97px_2.914px_0_rgba(3,0,71,0.09)] mx-auto my-0 transition-transform transform hover:scale-105'>
-      <div className='h-[340.115px] absolute top-[11.478px] left-[9.053px] right-[60.218px] z-[6]'>
-        <button className='w-[60px] h-[24px] bg-[#f29500] rounded-[16px] border-none relative pointer mt-0 mr-0 mb-0 ml-0'>
-          <div className='w-[54px] h-[15px] relative overflow-hidden z-[1] mt-[5px] mr-0 mb-0 ml-[3px]'>
-            <span className="flex w-[31px] h-[15px] justify-center items-center font-['Open_Sans'] text-[10px] font-semibold leading-[15px] text-[#fff] absolute top-0 left-[calc(50%-15px)] text-center whitespace-nowrap z-[2]">
-              {discount} off
-            </span>
-          </div>
-        </button>
-        <div>
-          <img src={image} alt={title} />
-          <div>{title}</div>
-        </div>
-        <div className='w-[210.762px] h-[20.396px] relative overflow-hidden z-[3] mt-[266.581px] mr-0 mb-0 ml-[6.487px]'>
-          <span className="flex h-[20.396px] justify-start items-center font-['Open_Sans'] text-[13.597536087036133px] font-semibold leading-[20.396px] text-[#373f50] absolute top-0 left-0 text-left whitespace-nowrap z-[4]">
-            ${price}
-          </span>
-        </div>
-        {oldPrice && (
-          <span className="flex h-[20.396px] justify-start items-center font-['Open_Sans'] text-[13.597536087036133px] font-semibold leading-[20.396px] text-[#7d879c] absolute top-[319.719px] left-[64.762px] text-left whitespace-nowrap z-[6]">
-            ${oldPrice}
-          </span>
-        )}
+    <div className="flex relative flex-col  w-[286px] h-[370px] gap-10 items-start py-3.5 pr-4 font-semibold bg-white rounded-lg shadow-[0_0.97px_2.914px_0_rgba(3,0,71,0.09)] transition-transform transform hover:scale-105">
+      <div className="  rounded-full text-center text-xs p-2 text-white ml-[2rem]  w-12  bg-[#F89C0E] font-thin">
+      {discount}
       </div>
-      <div className='w-[11.331px] h-[11.331px] bg-[url(../assets/images/6f268039-b541-4974-acaa-de29f97211d2.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[335.244px] left-1/2 translate-x-[948.57%] translate-y-0 z-[9]' />
+      <div className="">
+        <img src=  {image} alt="" className="w-40 ml-[4rem] absolute h-40" />
+      
+      </div>
+      <div className="flex gap-5 font-light   mt-[10rem] ml-[2rem] text-sm">
+        <div className="flex flex-col ">
+          <div className="text-[#373F50] leading-[150%]">{title}</div>
+          <div className="flex gap-2.5 mt-3.5 items-center whitespace-nowrap">
+            <div className="grow text-red leading-[175%]">{price}</div>
+            <div className="leading-[150%] text-gray">{oldPrice}</div>
+          </div>
+        </div>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/7576e001a6fb0f62486f2adfd87e77b953fc8d4c8725974bfcd9898cbf434091?"
+          className="shrink-0 self-end ml-[5rem] mt-5 w-7  border-lime-700 border-solid aspect-[1.04]"
+        />
+      </div>
     </div>
   );
 }

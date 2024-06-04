@@ -17,7 +17,7 @@ export default function Home() {
       <br />
       <br />
       <div>
-        <p>Nos Produits le plus vendus</p>
+
       <CardGrid  />
       </div>
    
