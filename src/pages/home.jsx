@@ -5,6 +5,7 @@ import Carousel from "../components/heroSection/carrousel";
 import BannerHeroSction from "../components/heroSection/BannerHeroSction";
 import Modal from "../components/modals/Modal";
 import CardGrid from "../components/CardGrid";
+import HomeCarrouselPromo from "../components/promotion/HomeCarrouselPromo";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <div>
 
       <CardGrid  />
+      <br />
+      <HomeCarrouselPromo/>
       </div>
    
     </div>
