@@ -1,7 +1,4 @@
-
-
 import React, { useState, useEffect } from "react";
-import axios from "axios"; // Import Axios
 import ProductCard from "./ProductCard";
 import CategoryFilter from "./CategoryFilter";
 import Loader from "./Loader";
@@ -16,14 +13,15 @@ const ShoppingCartPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get(
-        "xc"
+      const response = await fetch(
+        "https://capstone2-c2-josephb613.onrender.com/api/product"
       );
-      setProducts(response.data);
+      const data = await response.json();
+      setProducts(data);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching products:", error);
-      setProducts([]); // Initialize with an empty array in case of error
+      setProducts([]);
       setLoading(false);
     }
   };
@@ -49,14 +47,14 @@ const ShoppingCartPage = () => {
   };
 
   return (
-    <div className="p-4 w-full shadow gap-10 flex flex-col lg:flex-row">
+    <div className="p-4 w-full  shadow gap-10 flex flex-col lg:flex-row">
 
       {/* Sidebar */}
-      <section className="w-[20%] w-96">
+      <section className="w-[20%] w-96  ">
         <div className="mt-2 p-5">
-          <ProductSearchBar onSearch={handleSearch} /> 
+        <ProductSearchBar onSearch={handleSearch} /> 
         </div>
-        <ButtonSell />
+       <ButtonSell/>
         <CategoryFilter
           categories={uniqueCategories}
           filterProductsByCategory={filterProductsByCategory}
@@ -67,9 +65,9 @@ const ShoppingCartPage = () => {
           <div className="absolute z-50 mt-10 ml-4 text-white">
             <h3 className="font-normal text-xm mb-2">PRODUITS DE GROS</h3>
             <p className="font-bold text-1xl mb-10">Tous vos produits agricoles en gros</p>
-            <p className="text-bg-gold mb-10 font-bold">A partir de 500 kg</p>
+            <p className="text-bg-gold mb-10 font-bold">A partir de 500 kg </p>
           </div>
-          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie rounde-sm" />
+          <img src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1713447871/Banner%20publicite/11_fdza96.webp" alt="image banner section categorie rounde-sm"  />
         </div>
       </section>
 
