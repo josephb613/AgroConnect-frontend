@@ -1,8 +1,7 @@
-
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import HomeCard from './HomeCard';
-import Loader from '../components/marquetplace/Loader';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import HomeCard from "./HomeCard";
+import Loader from "../components/marquetplace/Loader";
 
 export default function CardGrid() {
   const [data, setData] = useState([]);
@@ -11,7 +10,7 @@ export default function CardGrid() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://capstone2-c2-josephb613.onrender.com/api/card'); // Remplacez par votre URL d'API
+        const response = await axios.get("https://capstone2-c2-josephb613.onrender.com/api/card"); // Remplacez par votre URL d"API
         const cleanedData = response.data.map(item => ({
           discount: item.discount,
           title: item.title,
@@ -21,7 +20,7 @@ export default function CardGrid() {
         }));
         setData(cleanedData);
       } catch (error) {
-        console.error('Erreur lors de la récupération des données :', error);
+        console.error("Erreur lors de la récupération des données :", error);
       } finally {
         setLoading(false);
       }
@@ -49,3 +48,4 @@ export default function CardGrid() {
     </div>
   );
 }
+

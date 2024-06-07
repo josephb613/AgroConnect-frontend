@@ -17,7 +17,7 @@ const ShoppingCartPage = () => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        "https://capstone2-c2-josephb613.onrender.com/api/product"
+        "xc"
       );
       setProducts(response.data);
       setLoading(false);
