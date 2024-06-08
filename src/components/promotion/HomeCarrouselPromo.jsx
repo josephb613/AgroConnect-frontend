@@ -106,19 +106,19 @@ export default function HomeCarrouselPromo() {
   };
 
   return (
-    <div className="flex border relative overflow-hidden flex-col bg-green justify-center font-semibold text-white min-h-[349px]">
-      <div className="flex flex-col items-start px-20 pt-10 pb-20 w-full bg-neutral-800 max-md:px-5 max-md:w-full">
+    <div className="flex border  overflow-hidden flex-col bg-green justify-center font-semibold text-white min-h-[349px]">
+      <div className="flex flex-col items-start w-full bg-neutral-800 max-md:px-5 max-md:w-full">
         <div className="ml-16 text-xl leading-5 max-md:ml-0">
-          <span className="text-white">S'inscrire</span>
+          <span className="text-white text-sm font-light">S'inscrire</span>
         </div>
-        <div className="mt-11 ml-16 text-4xl font-bold leading-[52px] max-md:mt-5 max-md:ml-0 max-md:text-3xl max-sm:text-2xl">
+        <div className="mt-11  text-4xl font-semibold ml-16  max-md:mt-5 max-md:ml-0 max-md:text-3xl max-sm:text-2xl">
           15% de réduction sur tous 
           <br />
           nos produits 
         </div>
         <button 
           onClick={handleButtonClick} 
-          className="px-4 py-3 rounded-full mt-8 mb-4 ml-16 text-base bg-[#F89C0E] shadow-lg max-md:mt-5 max-md:ml-0"
+          className="px-4 py-3 rounded-full mt-8 mb-4 ml-16 text-sm font-light bg-[#F89C0E] shadow-lg max-md:mt-5 max-md:ml-0"
         >
           Boutique
         </button>
@@ -126,7 +126,7 @@ export default function HomeCarrouselPromo() {
       <img 
         src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717787069/Frame_t4deys.png" 
         alt="Promo"
-        className="w-[40rem] h-[30rem] ml-[58%] mt-[5%] z-20 absolute max-md:w-[30rem] max-md:h-[20rem] max-md:ml-[50%] max-sm:w-[20rem] max-sm:h-[15rem] max-sm:ml-[40%]"
+        className="w-[40rem]  z-20 h-[30rem] ml-[58%] mt-[10%]  absolute max-md:w-[30rem] max-md:h-[20rem] max-md:ml-[50%] max-sm:w-[20rem] max-sm:h-[15rem] max-sm:ml-[40%]"
       />
       <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
         <h2 className="text-xl font-bold">Créez un compte</h2>

@@ -6,24 +6,24 @@ import BannerHeroSction from "../components/heroSection/BannerHeroSction";
 import Modal from "../components/modals/Modal";
 import CardGrid from "../components/CardGrid";
 import HomeCarrouselPromo from "../components/promotion/HomeCarrouselPromo";
+import BannerFooter from "../components/Footer/BannerFooter";
 
 export default function Home() {
   return (
     <div className="p-0 border b-0 m-0">
       <div>
-        <Modal />
+        <Modal/>
       </div>
       <Carousel />
       <BannerHeroSction />
-      <br />
-      <br />
+      <br/>
+      <br/>
       <div>
-
-      <CardGrid  />
-      <br />
-      <HomeCarrouselPromo/>
+        <CardGrid />
+        <br />
+        <HomeCarrouselPromo />
       </div>
-   
+      <BannerFooter />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onRequestClose, children }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       className="modal"
-      overlayClassName="modal-overlay z-50  border"
+      overlayClassName="modal-overlay z-40  border"
     >
       <div className="modal-content ">
         {children}
