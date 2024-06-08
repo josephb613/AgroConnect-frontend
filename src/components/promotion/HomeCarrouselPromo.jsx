@@ -106,8 +106,8 @@ export default function HomeCarrouselPromo() {
   };
 
   return (
-    <div className="flex border  overflow-hidden flex-col bg-green justify-center font-semibold text-white min-h-[349px]">
-      <div className="flex flex-col items-start w-full bg-neutral-800 max-md:px-5 max-md:w-full">
+    <div className="flex  flex-col bg-green justify-center font-semibold text-white min-h-[349px]">
+      <div className="flex flex-col z-30 items-start   max-md:px-5 max-md:w-full">
         <div className="ml-16 text-xl leading-5 max-md:ml-0">
           <span className="text-white text-sm font-light">S'inscrire</span>
         </div>
@@ -126,7 +126,7 @@ export default function HomeCarrouselPromo() {
       <img 
         src="https://res.cloudinary.com/dqrs3xyic/image/upload/v1717787069/Frame_t4deys.png" 
         alt="Promo"
-        className="w-[40rem]  z-20 h-[30rem] ml-[58%] mt-[10%]  absolute max-md:w-[30rem] max-md:h-[20rem] max-md:ml-[50%] max-sm:w-[20rem] max-sm:h-[15rem] max-sm:ml-[40%]"
+        className="w-[39rem]  z-20 h-[30rem] ml-[56%] mt-[10%]  absolute max-md:w-[30rem] max-md:h-[20rem] max-md:ml-[40%] max-sm:w-[15rem] max-sm:h-[15rem] max-sm:ml-[25%]"
       />
       <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
         <h2 className="text-xl font-bold">Créez un compte</h2>
