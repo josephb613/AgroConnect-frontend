@@ -16,9 +16,8 @@ export default function Home() {
         </div>
         <Carousel />
         <BannerHeroSction />
-        <p className="text-green ml-20 mt-10 mb-10 text-2xl font-semibold ">Produits les plus vendus</p>
         <div className="my-8 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mt-8 flex justify-center items-center">
+          <div className="mt-10 flex justify-center items-center">
             <CardGrid />
           </div>
         </div>

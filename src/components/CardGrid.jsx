@@ -220,9 +220,148 @@
 
 
 
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import HomeCard from "./HomeCard";
+// import Loader from "../components/marquetplace/Loader";
+
+// const fetchCardData = async () => {
+//   try {
+//     const response = await axios.get("https://capstone2-c2-josephb613.onrender.com/api/card");
+//     return response.data.map(item => ({
+//       discount: item.discount,
+//       title: item.title,
+//       price: item.price,
+//       oldPrice: item.oldPrice || null,
+//       image: item.image,
+//     }));
+//   } catch (error) {
+//     console.error("Erreur lors de la récupération des données :", error);
+//     throw error;
+//   }
+// };
+
+// export default function CardGrid() {
+//   const [data, setData] = useState([]);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const cleanedData = await fetchCardData();
+//         setData(cleanedData);
+//       } catch (error) {
+//         // Handle error if necessary
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   return (
+//     <div className=" flex  gap-20 w-full">
+//       {loading ? (
+//         <Loader loading={loading} />
+//       ) : (
+//         data.map((card, index) => (
+//           <HomeCard
+//             key={index}
+//             discount={card.discount}
+//             title={card.title}
+//             price={card.price}
+//             oldPrice={card.oldPrice}
+//             image={card.image}
+//           />
+//         ))
+//       )}
+//     </div>
+//   );
+// }
+
+
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import HomeCard from "./HomeCard";
+// import Loader from "../components/marquetplace/Loader";
+
+// const fetchCardData = async () => {
+//   try {
+//     const response = await axios.get("https://capstone2-c2-josephb613.onrender.com/api/card");
+//     return response.data.map(item => ({
+//       discount: item.discount,
+//       title: item.title,
+//       price: item.price,
+//       oldPrice: item.oldPrice || null,
+//       image: item.image,
+//       category: item.category,  // Inclure la catégorie
+//     }));
+//   } catch (error) {
+//     console.error("Erreur lors de la récupération des données :", error);
+//     throw error;
+//   }
+// };
+
+// export default function CardGrid() {
+//   const [data, setData] = useState({});
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const cleanedData = await fetchCardData();
+//         const categorizedData = cleanedData.reduce((acc, card) => {
+//           if (!acc[card.category]) {
+//             acc[card.category] = [];
+//           }
+//           acc[card.category].push(card);
+//           return acc;
+//         }, {});
+//         setData(categorizedData);
+//       } catch (error) {
+//         // Handle error if necessary
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   return (
+//     <div className="w-full">
+//       {loading ? (
+//         <Loader loading={loading} />
+//       ) : (
+//         Object.keys(data).map((category, index) => (
+//           <div key={index}>
+//             <h2 className="category-title text-2xl font-bold mb-4">{category}</h2>
+//             <div className="flex flex-wrap gap-4">
+//               {data[category].map((card, cardIndex) => (
+//                 <HomeCard
+//                   key={cardIndex}
+//                   discount={card.discount}
+//                   title={card.title}
+//                   price={card.price}
+//                   oldPrice={card.oldPrice}
+//                   image={card.image}
+//                 />
+//               ))}
+//             </div>
+//           </div>
+//         ))
+//       )}
+//     </div>
+//   );
+// }
+
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import HomeCard from "./HomeCard";
+import EnGrosSection from "./Wholesale";
+import NouveauxProduitsSection from "./NewProduct";
+import CategorySection from "./CategorySection";
 import Loader from "../components/marquetplace/Loader";
 
 const fetchCardData = async () => {
@@ -234,6 +373,7 @@ const fetchCardData = async () => {
       price: item.price,
       oldPrice: item.oldPrice || null,
       image: item.image,
+      category: item.category,
     }));
   } catch (error) {
     console.error("Erreur lors de la récupération des données :", error);
@@ -242,14 +382,21 @@ const fetchCardData = async () => {
 };
 
 export default function CardGrid() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const cleanedData = await fetchCardData();
-        setData(cleanedData);
+        const categorizedData = cleanedData.reduce((acc, card) => {
+          if (!acc[card.category]) {
+            acc[card.category] = [];
+          }
+          acc[card.category].push(card);
+          return acc;
+        }, {});
+        setData(categorizedData);
       } catch (error) {
         // Handle error if necessary
       } finally {
@@ -261,20 +408,21 @@ export default function CardGrid() {
   }, []);
 
   return (
-    <div className=" flex  gap-20 w-full">
+    <div className="w-full">
       {loading ? (
         <Loader loading={loading} />
       ) : (
-        data.map((card, index) => (
-          <HomeCard
-            key={index}
-            discount={card.discount}
-            title={card.title}
-            price={card.price}
-            oldPrice={card.oldPrice}
-            image={card.image}
-          />
-        ))
+        <>
+          {data["En gros"] && <EnGrosSection cards={data["En gros"]} />}
+          {data["Nouveaux produits"] && <NouveauxProduitsSection cards={data["Nouveaux produits"]} />}
+          {Object.keys(data).filter(category => category !== "En gros" && category !== "Nouveaux produits").map((category, index) => (
+            <CategorySection
+              key={index}
+              category={category}
+              cards={data[category]}
+            />
+          ))}
+        </>
       )}
     </div>
   );
